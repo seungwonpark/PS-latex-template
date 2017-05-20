@@ -7,10 +7,14 @@
 %
 % Original author:
 % Ted Pavlic (http://www.tedpavlic.com)
+% License : CC Attribution-NC-SA 3.0.
+% Read LICENSE for more information.
 %
 % Specially edited for competitive programming problem description
 % by koosaga(http://koosaga.com), seungwonpark(http://swpark.me)
 %
+% GitHub repository for this template (currently(2017.05.21) private) :
+% https://github.com/seungwonpark/PS-latex-template
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -31,7 +35,8 @@
 \usepackage{listings}
 \lstset{breaklines=true} % Word wrap within listings environment
 \lstset{basicstyle = \ttfamily,columns=fullflexible}
-\usepackage{hyperref}
+\usepackage{hyperref} % Required for using href
+\usepackage{pgffor} % Required for using \foreach
 
 \lstset{columns=fullflexible}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
@@ -59,8 +64,8 @@
 \lfoot{\lastxmark} % Bottom left footer
 \cfoot{} % Bottom center footer
 \rfoot{Last modified : \today{} \currenttime}
-\def\inputdataname{입력}
-\def\outputdataname{출력}
+\def\inputdataname{입력} % Name of 'input'
+\def\outputdataname{출력} % Name of 'output'
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand\headrulewidth{0.4pt} % Size of the header rule
@@ -76,11 +81,11 @@
 		\begin{multicols}{2}
 			\href{run:input#1.txt}{\inputdataname#1} \\
 			\rule{\columnwidth}{1pt}
-			\lstinputlisting[language={}]{input#1.txt}
+			\lstinputlisting[language={}]{input/input#1.txt}
 			\columnbreak
 			\href{run:output#1.txt}{\outputdataname#1} \\
 			\rule{\columnwidth}{1pt}
-			\lstinputlisting[language={}]{output#1.txt}
+			\lstinputlisting[language={}]{output/output#1.txt}
 		\end{multicols}
 		\vspace{\baselineskip}
 	\end{minipage}
@@ -112,9 +117,19 @@
 최소 스패닝 트리의 간선 가중치 합을 출력한다.
 
 \subsection{예제}
+% Place input text files at 'input/' directory.
+% Format : 'input/input%d.txt'
+% Place output text files at 'ouput/' directory.
+% Format : 'output/output%d.txt'
 
 \iodataNo{1}
 \iodataNo{2}
+
+%	% Or, you can use for loop as...
+%	\foreach \i in {1, 2, ..., 10}{
+%		\iodataNo{\i}
+%	}
+
 
 \textbf{예제 2 설명:} (1, 3), (1, 4), (4, 2), (2, 5), (2, 6) 간선을 선택하면 최소 스패닝 트리를 만들 수 있다. \newline
 
