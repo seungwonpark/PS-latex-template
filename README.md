@@ -23,7 +23,7 @@
 
 - I recommend to use [Foxit PDF Reader](https://www.foxitsoftware.com/products/pdf-reader). Then, you can : 
 	- copy & paste the data from pdf file properly
-	- directly view IO data files by clicking `입력1', `출력1` (Windows only).
+	- directly view IO data files by clicking `입력1`, `출력1` (Windows only).
 
 # License
 
