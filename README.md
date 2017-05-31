@@ -1,6 +1,7 @@
 # PS-latex-template
 
 - LaTeX template for PS description.
+[Preview](./PS-latex-template.pdf)
 
 # How to use
 
