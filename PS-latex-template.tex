@@ -28,11 +28,11 @@
 \usepackage{listings} % Required for insertion of code
 \usepackage{courier} % Required for the courier font
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-\usepackage{amsthm,amsmath}
-\usepackage{algorithm, algpseudocode}
+\usepackage{amsthm,amsmath} % Equation typesetting
+\usepackage{algorithm, algpseudocode} % algorithm
 \usepackage{verbatim} % for commment, verbatim environment
 \usepackage{spverbatim} % automatic linebreak verbatim environment
-\usepackage{listings}
+\usepackage{listings} % Required for lstlisting
 \lstset{breaklines=true} % Word wrap within listings environment
 \lstset{basicstyle = \ttfamily,columns=fullflexible}
 \usepackage{hyperref} % Required for using href
@@ -62,7 +62,7 @@
 \chead{IOI 2017 겨울학교 - 추가 문제} % Top center head
 \rhead{2017년 1월 9일 월요일} % Top right header
 \lfoot{\lastxmark} % Bottom left footer
-\cfoot{} % Bottom center footer
+\cfoot{\thepage} % Bottom center footer
 \rfoot{Last modified : \today{} \currenttime}
 \def\inputdataname{입력} % Name of 'input'
 \def\outputdataname{출력} % Name of 'output'
@@ -101,9 +101,9 @@
 \end{center}
 조승현 조교 (\textbf{a}inta) 는 어제 자신이 준비한 \textbf{\textit{쉬운}} 모의고사를 만점 받지 못한 여러분에게 실망했다. 여러분들의 실력이 정말 심각하다고 생각한 승현이는 \textbf{\textit{쉬운}} 문제를 준비했다. \newline
 
-조승현 조교가 준비한 문제는 그래프의 "최소 스패닝 트리" 를 구하는 문제이다. 정점과 간선이 주어졌을 때, 그래프의 최소 스패닝 트리를 구하면 된다. 조승현 조교는 간선의 가중치를 마음대로 주면 여러분들이 너무 어려워 할까봐, 수열 $p_1, ..., p_n$ 을 주고, 정점  $a$와 정점 $b$ 를 잇는 간선의 가중치를 $p_a + p_b$ 로 고정했다. \newline
+조승현 조교가 준비한 문제는 그래프의 ``최소 스패닝 트리'' 를 구하는 문제이다. 정점과 간선이 주어졌을 때, 그래프의 최소 스패닝 트리를 구하면 된다. 조승현 조교는 간선의 가중치를 마음대로 주면 여러분들이 너무 어려워 할까봐, 수열 $p_1, ..., p_n$ 을 주고, 정점  $a$와 정점 $b$ 를 잇는 간선의 가중치를 $p_a + p_b$ 로 고정했다. \newline
 
-아뿔싸, 장난기 많은 윤지학 조교가 조승현 조교의 컴퓨터에 sudo rm -rf를 난사하고 집으로 도망갔다. 조승현 조교는 깨끗하게 포맷된 자신의 컴퓨터를 보면서 절규하기 시작했다. 급한 대로, 조승현 조교는 다른 문제의 테스트 데이터를 적당히 바꿔서, 최소 스패닝 트리 문제에 적용할 예정이다.
+아뿔싸, 장난기 많은 윤지학 조교가 조승현 조교의 컴퓨터에 \texttt{sudo rm -rf}를 난사하고 집으로 도망갔다. 조승현 조교는 깨끗하게 포맷된 자신의 컴퓨터를 보면서 절규하기 시작했다. 급한 대로, 조승현 조교는 다른 문제의 테스트 데이터를 적당히 바꿔서, 최소 스패닝 트리 문제에 적용할 예정이다.
 
 \subsection{입력}
 첫 번째 줄에 정점의 수 $n$과, 간선 집합의 수 $m$ 이 주어진다. ($1 \leq n, m \leq 100,000$) \newline
